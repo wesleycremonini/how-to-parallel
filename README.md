@@ -2,5 +2,4 @@
 - INFINITE GOROUTINES BENCHMARK (SLOWEST) -> 2400ms
 - WORKER POOL (RESPECTING NUM OF CORES BENCHMARK) -> 14.64ms
 
-That's because of ineffective memory sharing and excessive context switching from spawnning too many goroutines with only 4 CPU cores.
-When using the max num of CPU cores, with efficient memory sharing (that will prevent others CPU core cache from being invalidated when accessed from another CPU core), and also making it so each goroutine only reads contiguos memory, preventing core context switch (which is very slow).
+This is due to ineffective memory sharing and excessive context switching from spawning too many goroutines with only 4 CPU cores. When using the maximum number of CPU cores, with efficient memory sharing (to prevent other CPU core caches from being invalidated when accessed from another CPU core), and also ensuring that each goroutine only reads contiguous memory, we can prevent core context switches, which are very slow.
