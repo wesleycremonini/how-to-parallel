@@ -112,7 +112,6 @@ func map_concurrent_worker_pool[T1, T2 any](arr []T1, f func(item T1, index int)
 
 func max_parallelism() int {
 	maxProcs := runtime.GOMAXPROCS(0)
-	println(maxProcs)
 	numCPU := runtime.NumCPU()
 	if maxProcs < numCPU {
 		return maxProcs
