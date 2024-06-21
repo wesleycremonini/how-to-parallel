@@ -1,3 +1,5 @@
+[Medium Article](https://medium.com/@wesleycremonini0/why-concurrent-code-can-be-slower-than-sequential-code-88d82d87ff09)
+
 - NORMAL MAP BENCHMARK (ONE CORE) -> 24.67ms
 - INFINITE GOROUTINES BENCHMARK (SLOWEST) -> 2400ms
 - WORKER POOL (RESPECTING NUM OF CORES BENCHMARK) -> 14.64ms
